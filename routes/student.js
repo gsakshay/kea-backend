@@ -27,10 +27,10 @@ studentRouter
 })
 
 studentRouter
-.route('/:parentId/:centerId/:hallTicket/:paymentId/:boardId')
+.route('/')
 .post((req, res, next)=>{
-    const {parentId, centerId, hallTicket, paymentId, boardId} = req.params;
-    const {rollNumber, name, age, aadhaarNumber, dob, address} = req.body;
+    const {rollNumber, name, age, aadhaarNumber, dob, address, parentId, centerId, hallTicket, paymentId, boardId} 
+    = req.body;
     try{
     student.create({
         rollNumber, name, age, aadhaarNumber, dob, address, parentId, centerId, hallTicket, paymentId, boardId
